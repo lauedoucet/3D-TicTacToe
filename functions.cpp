@@ -1,7 +1,5 @@
 /* 
-	Assignment 1 for COMP 322
-	Laurence Doucet
-	260799839
+	Copyright 2020, Laurence Doucet, All rights reserved
 */
 
 #include <iostream>
