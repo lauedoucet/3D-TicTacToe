@@ -33,7 +33,7 @@ bool verticalWin(int board[])
     bool winner = 0;
     for (int i=0; i<27; i++)
     {
-        if (board[i] == board[i+3] && board[i] == board[i+6] && (board[i] == 'X' || board[i] == 'O')) { winner = 1;}
+        if (board[i] == board[i+3] && board[i] == board[i+6]) { winner = 1;}
 
         if (i == 2 || i == 11 || i == 20) { i = i + 8;}
     }
@@ -46,7 +46,7 @@ bool horizontalWin(int board[])
     bool winner = 0;
     for (int i=0; i<27; i = i+3)
     {
-        if (board[i] == board[i+1] && board[i] == board[i+2] && (board[i] == 'X' || board[i] == 'O')) { winner = 1;}
+        if (board[i] == board[i+1] && board[i] == board[i+2]) { winner = 1;}
     }
     return winner;
 }
@@ -58,12 +58,12 @@ bool diagonalWin(int board[])
     // diagonal win towards the right
     for (int i=0; i<27; i = i+9)
     {
-        if (board[i] == board[i+4] && board[i] == board[i+8] && (board[i] == 'X' || board[i] == 'O')) {winner = 1;}
+        if (board[i] == board[i+4] && board[i] == board[i+8]) {winner = 1;}
     }
     // diagonal win towards the left
     for (int i=2; i<27; i = i+9)
     {
-        if (board[i] == board[i+2] && board[i] == board[i+4] && (board[i] == 'X' || board[i] == 'O')) {winner = 1;}
+        if (board[i] == board[i+2] && board[i] == board[i+4]) {winner = 1;}
     }
     return winner;
 }
@@ -76,19 +76,22 @@ bool win3D(int board[])
     for (int i=0; i<9; i++)
     {
         // same spot
-        if (board[i] == board[i+9] && board[i] == board[i+18] && (board[i] == 'X' || board[i] == 'O')) {winner = 1;}
+        if (board[i] == board[i+9] && board[i] == board[i+18]) {winner = 1;}
         // 3D horizontal win
         if (i == 0 || i == 3 || i == 6)
         {
-            if (board[i] == board[i+10] && board[i] == board[i+20] && (board[i] == 'X' || board[i] == 'O')) {winner = 1;}
+            if (board[i] == board[i+10] && board[i] == board[i+20]) {winner = 1;}
+        }
+        // 3D vertical win
+        if (i == 0 || i == 1 || i == 2)
+        {
+            if (board[i] == board[i+12] && board[i] == board[i+24]) {winner = 1;}
         }
     }
 
-    // TODO: 3D vertical wins
-
     // 3D diagonal wins
-    if (board[0] == board[13] && board[0] == board[26] && (board[0] == 'X' || board[0] == 'O')) { winner = 1;}
-    if (board[20] == board[13] && board[20] == board[6] && (board[20] == 'X' || board[20] == 'O')) { winner = 1;}
+    if (board[0] == board[13] && board[0] == board[26]) { winner = 1;}
+    if (board[20] == board[13] && board[20] == board[6]) { winner = 1;}
 
     return winner;
 }
@@ -97,6 +100,66 @@ bool win3D(int board[])
 bool isWin(int board[])
 {
     return (verticalWin(board) || horizontalWin(board) || diagonalWin(board) || win3D(board));
+}
+
+// checks if one of the neighbouring cells has a certain symbol and changes cell i accordingly
+bool checkNeighbours(int i, int board[], char symbol)
+{
+    bool moved = 0;
+    switch(i) {
+        case 0:
+        case 9:
+        case 18:
+            if (board[i+1] == symbol || board[i+3] == symbol || board[i+4] == symbol) {  board[i] == 'O'; moved = 1;   }
+            break;
+        case 1:
+        case 10:
+        case 19:
+            if (board[i-1] == symbol || board[i+1] == symbol || board[i+2] == symbol || board[i+3] == symbol 
+                || board[i+4] == symbol) {  board[i] == 'O'; moved = 1;   }
+            break;
+        case 2:
+        case 11:
+        case 20:
+            if (board[i-1] == symbol || board[i+2] == symbol || board[i+3] == symbol) {  board[i] == 'O'; moved = 1;   }
+            break;
+        case 3:
+        case 12:
+        case 21:
+            if (board[i-3] == symbol || board[i-2] == symbol || board[i+1] == symbol || board[i+3] == symbol
+                || board[i+4] == symbol) {  board[i] == 'O'; moved = 1;   } 
+            break;
+        case 4:
+        case 13:
+        case 22:
+            if (board[i-4] == symbol || board[i-3] == symbol || board[i-2] == symbol || board[i-1] == symbol 
+                || board[i+1] == symbol || board[i+2] == symbol || board[i+3] == symbol || board[i+4] == symbol )
+                {     board[i] == 'O'; moved = 1;   } 
+            break;
+        case 5:
+        case 14:
+        case 23:
+            if (board[i-4] == symbol || board[i-3] == symbol || board[i-1] == symbol || board[i+2] == symbol || board[i+3] == symbol)
+                {     board[i] == 'O'; moved = 1;   } 
+            break;
+        case 6:
+        case 15:
+        case 24:
+            if (board[i-3] == symbol || board[i-2] == symbol || board[i+1] == symbol ) {     board[i] == 'O'; moved = 1;   } 
+            break;
+        case 7: 
+        case 16:
+        case 25:
+            if (board[i-4] == symbol || board[i-3] == symbol || board[i-2] == symbol || board[i-1] == symbol 
+                || board[i+1] == symbol) {     board[i] == 'O'; moved = 1;   } 
+            break;
+        case 8: 
+        case 17: 
+        case 26:
+            if (board[i-4] == symbol || board[i-3] == symbol || board[i-1] == symbol) {     board[i] == 'O'; moved = 1;   } 
+            break;
+    }
+    return moved;
 }
 
 /* ********************assignment methods ************************************/
@@ -213,48 +276,60 @@ bool checkWinner(int board[])
     }
 }
 
-// TODO: change strategy to check for wins
 void computerMove(int board[])
 {
     bool moved = 0;
-    // check if computer can win
     for (int i=0; i<27; i++)
     {
-        // checks all empty spots
+        // check all empty cells
         if ((board[i] != 'X' || board[i] != 'O'))
         {
             int cell = board[i];
+            // check if computer can win
             board[i] = 'O';
             if (isWin(board)) { moved = 1; break;}
             else { board[i] = cell; }
         }
     }
-    
-    // check if computer can block the player
-    if (!moved) 
+
+    if (!moved)
     {
-        // block a win
-       for (int i=0; i<27; i++)
+        for (int i=0; i<27; i++)
         {
+            // check all empty cells
             if ((board[i] != 'X' || board[i] != 'O'))
             {
                 int cell = board[i];
+                // check if computer can block player
                 board[i] = 'X';
-                if (isWin(board)) { board[i] = 'O'; moved = 1; break; }
+                if (isWin(board)) { board[i] = 'O'; moved = 1; break;}
                 else { board[i] = cell; }
             }
-        } 
-    }
-
-    // computer moves randomly if we can't win or block
-    while (!moved)
-    {
-        int i = rand() % 27;
-        if ((board[i] != 'X' || board[i] != 'O'))
-        {
-            board[i] = 'O';
-            moved = 1;
         }
     }
     
+    if (!moved)
+    {
+        for (int i=0; i<27; i++)
+        {
+            // move next to 'O' if there is one on the board
+            if ((board[i] != 'X' || board[i] != 'O'))
+            {
+                if (checkNeighbours(i, board, 'O')) { board[i] = 'O'; moved = 1; break;}
+            }
+        }
+    }
+
+    if (!moved)
+    {
+        for (int i=0; i<27; i++)
+        {
+            // move next to 'X' if there is one on the board
+            if ((board[i] != 'X' || board[i] != 'O'))
+            {
+                if (checkNeighbours(i, board, 'X')) { board[i] = 'O'; moved = 1; break;}
+            }
+        }
+    }
 }
+    
