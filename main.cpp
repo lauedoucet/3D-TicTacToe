@@ -1,15 +1,15 @@
 /*
 	Copyright 2020, Laurence Doucet, All rights reserved
 */
+
 #include "functions.cpp"
 
 using namespace std;
 
 int main() 
 {
-    // initializing board, I am using '-' to indicate unused spots
-    char board[] = {'-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-',
-    '-', '-', '-', '-', '-', '-', '-', '-', '-', '-'};
+    // initializing board, each board element holds it's index number
+    int board[] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27};
     
     greetAndInstruct();
 
@@ -17,7 +17,7 @@ int main()
         // game loop (mostly checks for ties)
         while (!checkWinner(board))
         {
-            // as player for their input
+            // ask player for their input
             cout << " Please input the cell number you would like to play : ";
             int index;
             cin >> index;

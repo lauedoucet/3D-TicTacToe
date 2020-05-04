@@ -13,12 +13,12 @@ bool startGame = 0;
 /*  ************************ helper methods ****************************  */
 
 // checks if all the spots are used on the board
-bool isFull(char board[])
+bool isFull(int board[])
 {
     int n = 0;
     for (int i=0; i<27; i++)
     {
-        if (board[i] != '-')
+        if (board[i] == 'X' || board[i] == 'O') 
         {
             n++;
         }
@@ -28,12 +28,12 @@ bool isFull(char board[])
 }
 
 // checks for vertical wins
-bool verticalWin(char board[])
+bool verticalWin(int board[])
 {
     bool winner = 0;
     for (int i=0; i<27; i++)
     {
-        if (board[i] == board[i+3] && board[i] == board[i+6] && board[i] != '-') { winner = 1;}
+        if (board[i] == board[i+3] && board[i] == board[i+6] && (board[i] == 'X' || board[i] == 'O')) { winner = 1;}
 
         if (i == 2 || i == 11 || i == 20) { i = i + 8;}
     }
@@ -41,64 +41,67 @@ bool verticalWin(char board[])
 }
 
 // checks for horizontal wins
-bool horizontalWin(char board[])
+bool horizontalWin(int board[])
 {
     bool winner = 0;
     for (int i=0; i<27; i = i+3)
     {
-        if (board[i] == board[i+1] && board[i] == board[i+2] && board[i] != '-') { winner = 1;}
+        if (board[i] == board[i+1] && board[i] == board[i+2] && (board[i] == 'X' || board[i] == 'O')) { winner = 1;}
     }
     return winner;
 }
 
 // checks for diagonal wins
-bool diagonalWin(char board[])
+bool diagonalWin(int board[])
 {
     bool winner = 0;
     // diagonal win towards the right
     for (int i=0; i<27; i = i+9)
     {
-        if (board[i] == board[i+4] && board[i] == board[i+8] && board[i] != '-') {winner = 1;}
+        if (board[i] == board[i+4] && board[i] == board[i+8] && (board[i] == 'X' || board[i] == 'O')) {winner = 1;}
     }
     // diagonal win towards the left
     for (int i=2; i<27; i = i+9)
     {
-        if (board[i] == board[i+2] && board[i] == board[i+4] && board[i] != '-') {winner = 1;}
+        if (board[i] == board[i+2] && board[i] == board[i+4] && (board[i] == 'X' || board[i] == 'O')) {winner = 1;}
     }
     return winner;
 }
 
 // checks for 3D wins
-bool win3D(char board[])
+// TODO: missing some winning cases (vertical accross 3D)
+bool win3D(int board[])
 {
     bool winner = 0;
     for (int i=0; i<9; i++)
     {
         // same spot
-        if (board[i] == board[i+9] && board[i] == board[i+18] && board[i] != '-') {winner = 1;}
+        if (board[i] == board[i+9] && board[i] == board[i+18] && (board[i] == 'X' || board[i] == 'O')) {winner = 1;}
         // 3D horizontal win
         if (i == 0 || i == 3 || i == 6)
         {
-            if (board[i] == board[i+10] && board[i] == board[i+20] && board[i] != '-') {winner = 1;}
+            if (board[i] == board[i+10] && board[i] == board[i+20] && (board[i] == 'X' || board[i] == 'O')) {winner = 1;}
         }
     }
 
+    // TODO: 3D vertical wins
+
     // 3D diagonal wins
-    if (board[0] == board[13] && board[0] == board[26] && board[0] != '-') { winner = 1;}
-    if (board[20] == board[13] && board[20] == board[6] && board[20] != '-') { winner = 1;}
+    if (board[0] == board[13] && board[0] == board[26] && (board[0] == 'X' || board[0] == 'O')) { winner = 1;}
+    if (board[20] == board[13] && board[20] == board[6] && (board[20] == 'X' || board[20] == 'O')) { winner = 1;}
 
     return winner;
 }
 
 // checks if there is a win only (not ties)
-bool isWin(char board[])
+bool isWin(int board[])
 {
     return (verticalWin(board) || horizontalWin(board) || diagonalWin(board) || win3D(board));
 }
 
 /* ********************assignment methods ************************************/
 
-void displayBoard(char board[])
+void displayBoard(int board[])
 {
     // line format for board
     string line[] {"\t", " | ", " | "};
@@ -111,7 +114,14 @@ void displayBoard(char board[])
         {
             for (string space : line)
             {
-                cout << space << board[i];
+                if ( board[i] == 'X' || board[i] == 'O')
+                {
+                    char c = (char) board[i];
+                    cout << space << c;
+                } else {
+                    int c = board[i];
+                    cout << space << c;
+                }
                 i++;
             }
             i = i + 6;
@@ -174,14 +184,14 @@ void greetAndInstruct()
     }
 }
 
-bool checkIfLegal(int cellNbre, char board[])
+bool checkIfLegal(int cellNbre, int board[])
 {
     // checks range of cellNbre and is spot is used
     if ( cellNbre < 1 || cellNbre > 27)
     {
         cout << " Your input is out of range." << endl;
         return false;
-    } else if (board[cellNbre-1] != '-') {
+    } else if ((board[cellNbre-1] == 'X' || board[cellNbre-1] == 'O')) {
         cout << " This spot in the board is already used." << endl;
         return false;
     } else {
@@ -189,7 +199,7 @@ bool checkIfLegal(int cellNbre, char board[])
     }
 }
 
-bool checkWinner(char board[])
+bool checkWinner(int board[])
 {
     if (isWin(board)) 
     {
@@ -203,18 +213,20 @@ bool checkWinner(char board[])
     }
 }
 
-void computerMove(char board[])
+// TODO: change strategy to check for wins
+void computerMove(int board[])
 {
     bool moved = 0;
     // check if computer can win
     for (int i=0; i<27; i++)
     {
         // checks all empty spots
-        if (board[i] == '-')
+        if ((board[i] != 'X' || board[i] != 'O'))
         {
+            int cell = board[i];
             board[i] = 'O';
             if (isWin(board)) { moved = 1; break;}
-            else { board[i] = '-'; }
+            else { board[i] = cell; }
         }
     }
     
@@ -224,11 +236,12 @@ void computerMove(char board[])
         // block a win
        for (int i=0; i<27; i++)
         {
-            if (board[i] == '-')
+            if ((board[i] != 'X' || board[i] != 'O'))
             {
+                int cell = board[i];
                 board[i] = 'X';
                 if (isWin(board)) { board[i] = 'O'; moved = 1; break; }
-                else { board[i] = '-'; }
+                else { board[i] = cell; }
             }
         } 
     }
@@ -237,7 +250,7 @@ void computerMove(char board[])
     while (!moved)
     {
         int i = rand() % 27;
-        if (board[i] == '-')
+        if ((board[i] != 'X' || board[i] != 'O'))
         {
             board[i] = 'O';
             moved = 1;
