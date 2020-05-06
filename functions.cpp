@@ -4,11 +4,14 @@
 
 #include <iostream>
 #include <string>
+#include <algorithm>
 
 using namespace std;
 
 // global bool that tells us whether to start the game or not
 bool startGame = 0;
+// opponent type, either another player or computer
+char opponent;
 
 /*  ************************ helper methods ****************************  */
 
@@ -28,12 +31,12 @@ bool isFull(int board[])
 }
 
 // checks for vertical wins
-bool verticalWin(int board[])
+int verticalWin(int board[])
 {
     bool winner = 0;
     for (int i=0; i<27; i++)
     {
-        if (board[i] == board[i+3] && board[i] == board[i+6]) { winner = 1;}
+        if (board[i] == board[i+3] && board[i] == board[i+6]) { winner = board[i];}
 
         if (i == 2 || i == 11 || i == 20) { i = i + 8;}
     }
@@ -41,65 +44,69 @@ bool verticalWin(int board[])
 }
 
 // checks for horizontal wins
-bool horizontalWin(int board[])
+int horizontalWin(int board[])
 {
     bool winner = 0;
     for (int i=0; i<27; i = i+3)
     {
-        if (board[i] == board[i+1] && board[i] == board[i+2]) { winner = 1;}
+        if (board[i] == board[i+1] && board[i] == board[i+2]) {winner = board[i];}
     }
     return winner;
 }
 
 // checks for diagonal wins
-bool diagonalWin(int board[])
+int diagonalWin(int board[])
 {
     bool winner = 0;
     // diagonal win towards the right
     for (int i=0; i<27; i = i+9)
     {
-        if (board[i] == board[i+4] && board[i] == board[i+8]) {winner = 1;}
+        if (board[i] == board[i+4] && board[i] == board[i+8]) {winner = board[i];}
     }
     // diagonal win towards the left
     for (int i=2; i<27; i = i+9)
     {
-        if (board[i] == board[i+2] && board[i] == board[i+4]) {winner = 1;}
+        if (board[i] == board[i+2] && board[i] == board[i+4]) {winner = board[i];}
     }
     return winner;
 }
 
 // checks for 3D wins
-// TODO: missing some winning cases (vertical accross 3D)
-bool win3D(int board[])
+int win3D(int board[])
 {
     bool winner = 0;
     for (int i=0; i<9; i++)
     {
         // same spot
-        if (board[i] == board[i+9] && board[i] == board[i+18]) {winner = 1;}
+        if (board[i] == board[i+9] && board[i] == board[i+18]) {winner = board[i];}
         // 3D horizontal win
         if (i == 0 || i == 3 || i == 6)
         {
-            if (board[i] == board[i+10] && board[i] == board[i+20]) {winner = 1;}
+            if (board[i] == board[i+10] && board[i] == board[i+20]) {winner = board[i];}
         }
         // 3D vertical win
         if (i == 0 || i == 1 || i == 2)
         {
-            if (board[i] == board[i+12] && board[i] == board[i+24]) {winner = 1;}
+            if (board[i] == board[i+12] && board[i] == board[i+24]) {winner = board[i];}
         }
     }
 
     // 3D diagonal wins
-    if (board[0] == board[13] && board[0] == board[26]) { winner = 1;}
-    if (board[20] == board[13] && board[20] == board[6]) { winner = 1;}
+    if (board[0] == board[13] && board[0] == board[26]) {winner = board[0];}
+    if (board[20] == board[13] && board[20] == board[6]) {winner = board[20];}
 
     return winner;
 }
 
 // checks if there is a win only (not ties)
-bool isWin(int board[])
+int isWin(int board[])
 {
-    return (verticalWin(board) || horizontalWin(board) || diagonalWin(board) || win3D(board));
+    if (verticalWin(board) != 0) {  return verticalWin(board); }
+    else if (horizontalWin(board) != 0) {    return horizontalWin(board); }
+    else if (diagonalWin(board) != 0) {     return diagonalWin(board); }
+    else if (win3D(board) != 0) {   return win3D(board); }
+    return 0;
+
 }
 
 // checks if one of the neighbouring cells has a certain symbol and changes cell i accordingly
@@ -224,9 +231,18 @@ void greetAndInstruct()
         cout << endl;
     }
 
-    //start instructions
-    string start[] = {" Player starts first. Simply input the number of the cell you want to occupy.", 
-    " Player's move is marked with X. Computer's move is marked with O.", " Start? (y/n): "};
+    // ask if they want to play against computer or another player
+    string playerChoice[] = {" Would you like to play against another human or against the computer? ", 
+                                " Enter 'c' to play against the computer and 'p' to play against another human: "};
+    for (string line : playerChoice)
+    {
+        cout << line << endl;
+    }
+
+    cin >> opponent;
+
+    string start[] = {" Player starts first. Simply input the number of the cell you want to occupy.",
+                    " Player's move is marked with X. Computer or Player 2's move is marked with O.", " Start? (y/n): "};
 
     for (string line : start)
     {
@@ -264,7 +280,7 @@ bool checkIfLegal(int cellNbre, int board[])
 
 bool checkWinner(int board[])
 {
-    if (isWin(board)) 
+    if (isWin(board) != 0) 
     {
         // checks of every type of win
         return true;
@@ -287,7 +303,7 @@ void computerMove(int board[])
             int cell = board[i];
             // check if computer can win
             board[i] = 'O';
-            if (isWin(board)) { moved = 1; break;}
+            if (isWin(board) != 0) { moved = 1; break;}
             else { board[i] = cell; }
         }
     }
@@ -302,7 +318,7 @@ void computerMove(int board[])
                 int cell = board[i];
                 // check if computer can block player
                 board[i] = 'X';
-                if (isWin(board)) { board[i] = 'O'; moved = 1; break;}
+                if (isWin(board) != 0) { board[i] = 'O'; moved = 1; break;}
                 else { board[i] = cell; }
             }
         }
@@ -332,4 +348,4 @@ void computerMove(int board[])
         }
     }
 }
-    
+  
