@@ -5,9 +5,5 @@ The game can also be won with a diagonal or horizontal across the three matrices
 which looks at the matrices to find either a winning move or block the player. 
 
 # Learning outcomes
-Getting my feet wet with different C++ concepts and functionality. 
+Getting my feet wet with different C++ concepts and functionality. Added a local multiplayer for variety. 
 
-# TO-DO
-- Optimize the computer's game solving abilities
-- Implement a GUI
-- Multiplayer?
