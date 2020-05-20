@@ -1,0 +1,29 @@
+Start testing: May 20 11:56 Eastern Daylight Time
+----------------------------------------------------------
+1/1 Testing: TICTACTOETests
+1/1 Test: TICTACTOETests
+Command: "C:/Users/laure/projects/COMP 322/assignment1/3D-TicTacToe/build/test/TICTACTOETests.exe"
+Directory: C:/Users/laure/projects/COMP 322/assignment1/3D-TicTacToe/build/test
+"TICTACTOETests" start time: May 20 11:56 Eastern Daylight Time
+Output:
+----------------------------------------------------------
+Running main() from ..\googletest\googletest\src\gtest_main.cc
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TicTacToeTests
+[ RUN      ] TicTacToeTests.Something
+[       OK ] TicTacToeTests.Something (0 ms)
+[----------] 1 test from TicTacToeTests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (1 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.09 sec
+----------------------------------------------------------
+Test Passed.
+"TICTACTOETests" end time: May 20 11:56 Eastern Daylight Time
+"TICTACTOETests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: May 20 11:56 Eastern Daylight Time

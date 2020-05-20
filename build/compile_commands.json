@@ -1,0 +1,61 @@
+[
+{
+  "directory": "C:/Users/laure/projects/COMP 322/assignment1/3D-TicTacToe/build",
+  "command": "C:\\PROGRA~2\\MICROS~3\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1424~1.283\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   /FoCMakeFiles\\3D-TICTACTOE.dir\\main.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\laure\\projects\\COMP 322\\assignment1\\3D-TicTacToe\\main.cpp\"",
+  "file": "C:/Users/laure/projects/COMP 322/assignment1/3D-TicTacToe/main.cpp"
+},
+
+{
+  "directory": "C:/Users/laure/projects/COMP 322/assignment1/3D-TicTacToe/build",
+  "command": "C:\\PROGRA~2\\MICROS~3\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1424~1.283\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   /FoCMakeFiles\\3D-TICTACTOE.dir\\functions.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\laure\\projects\\COMP 322\\assignment1\\3D-TicTacToe\\functions.cpp\"",
+  "file": "C:/Users/laure/projects/COMP 322/assignment1/3D-TicTacToe/functions.cpp"
+},
+
+{
+  "directory": "C:/Users/laure/projects/COMP 322/assignment1/3D-TicTacToe/build",
+  "command": "C:\\PROGRA~2\\MICROS~3\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1424~1.283\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP  -I..\\googletest\\googlemock\\include -I..\\googletest\\googlemock -I..\\googletest\\googletest\\include -I..\\googletest\\googletest  /DWIN32 /D_WINDOWS /W4 /GR  /MDd /Zi /Ob0 /Od /RTC1   -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -wd4702 -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /Fogoogletest\\googlemock\\CMakeFiles\\gmock_main.dir\\__\\googletest\\src\\gtest-all.cc.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\laure\\projects\\COMP 322\\assignment1\\3D-TicTacToe\\googletest\\googletest\\src\\gtest-all.cc\"",
+  "file": "C:/Users/laure/projects/COMP 322/assignment1/3D-TicTacToe/googletest/googletest/src/gtest-all.cc"
+},
+
+{
+  "directory": "C:/Users/laure/projects/COMP 322/assignment1/3D-TicTacToe/build",
+  "command": "C:\\PROGRA~2\\MICROS~3\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1424~1.283\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP  -I..\\googletest\\googlemock\\include -I..\\googletest\\googlemock -I..\\googletest\\googletest\\include -I..\\googletest\\googletest  /DWIN32 /D_WINDOWS /W4 /GR  /MDd /Zi /Ob0 /Od /RTC1   -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -wd4702 -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /Fogoogletest\\googlemock\\CMakeFiles\\gmock_main.dir\\src\\gmock-all.cc.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\laure\\projects\\COMP 322\\assignment1\\3D-TicTacToe\\googletest\\googlemock\\src\\gmock-all.cc\"",
+  "file": "C:/Users/laure/projects/COMP 322/assignment1/3D-TicTacToe/googletest/googlemock/src/gmock-all.cc"
+},
+
+{
+  "directory": "C:/Users/laure/projects/COMP 322/assignment1/3D-TicTacToe/build",
+  "command": "C:\\PROGRA~2\\MICROS~3\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1424~1.283\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP  -I..\\googletest\\googlemock\\include -I..\\googletest\\googlemock -I..\\googletest\\googletest\\include -I..\\googletest\\googletest  /DWIN32 /D_WINDOWS /W4 /GR  /MDd /Zi /Ob0 /Od /RTC1   -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -wd4702 -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /Fogoogletest\\googlemock\\CMakeFiles\\gmock_main.dir\\src\\gmock_main.cc.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\laure\\projects\\COMP 322\\assignment1\\3D-TicTacToe\\googletest\\googlemock\\src\\gmock_main.cc\"",
+  "file": "C:/Users/laure/projects/COMP 322/assignment1/3D-TicTacToe/googletest/googlemock/src/gmock_main.cc"
+},
+
+{
+  "directory": "C:/Users/laure/projects/COMP 322/assignment1/3D-TicTacToe/build",
+  "command": "C:\\PROGRA~2\\MICROS~3\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1424~1.283\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP  -I..\\googletest\\googlemock\\include -I..\\googletest\\googlemock -I..\\googletest\\googletest\\include -I..\\googletest\\googletest  /DWIN32 /D_WINDOWS /W4 /GR  /MDd /Zi /Ob0 /Od /RTC1   -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -wd4702 -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /Fogoogletest\\googlemock\\CMakeFiles\\gmock.dir\\__\\googletest\\src\\gtest-all.cc.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\laure\\projects\\COMP 322\\assignment1\\3D-TicTacToe\\googletest\\googletest\\src\\gtest-all.cc\"",
+  "file": "C:/Users/laure/projects/COMP 322/assignment1/3D-TicTacToe/googletest/googletest/src/gtest-all.cc"
+},
+
+{
+  "directory": "C:/Users/laure/projects/COMP 322/assignment1/3D-TicTacToe/build",
+  "command": "C:\\PROGRA~2\\MICROS~3\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1424~1.283\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP  -I..\\googletest\\googlemock\\include -I..\\googletest\\googlemock -I..\\googletest\\googletest\\include -I..\\googletest\\googletest  /DWIN32 /D_WINDOWS /W4 /GR  /MDd /Zi /Ob0 /Od /RTC1   -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -wd4702 -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /Fogoogletest\\googlemock\\CMakeFiles\\gmock.dir\\src\\gmock-all.cc.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\laure\\projects\\COMP 322\\assignment1\\3D-TicTacToe\\googletest\\googlemock\\src\\gmock-all.cc\"",
+  "file": "C:/Users/laure/projects/COMP 322/assignment1/3D-TicTacToe/googletest/googlemock/src/gmock-all.cc"
+},
+
+{
+  "directory": "C:/Users/laure/projects/COMP 322/assignment1/3D-TicTacToe/build",
+  "command": "C:\\PROGRA~2\\MICROS~3\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1424~1.283\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP  -I..\\googletest\\googletest\\include -I..\\googletest\\googletest  /DWIN32 /D_WINDOWS /W4 /GR  /MDd /Zi /Ob0 /Od /RTC1   -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -wd4702 -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /Fogoogletest\\googletest\\CMakeFiles\\gtest.dir\\src\\gtest-all.cc.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\laure\\projects\\COMP 322\\assignment1\\3D-TicTacToe\\googletest\\googletest\\src\\gtest-all.cc\"",
+  "file": "C:/Users/laure/projects/COMP 322/assignment1/3D-TicTacToe/googletest/googletest/src/gtest-all.cc"
+},
+
+{
+  "directory": "C:/Users/laure/projects/COMP 322/assignment1/3D-TicTacToe/build",
+  "command": "C:\\PROGRA~2\\MICROS~3\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1424~1.283\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP  -I..\\googletest\\googletest\\include -I..\\googletest\\googletest  /DWIN32 /D_WINDOWS /W4 /GR  /MDd /Zi /Ob0 /Od /RTC1   -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -wd4702 -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /Fogoogletest\\googletest\\CMakeFiles\\gtest_main.dir\\src\\gtest_main.cc.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\laure\\projects\\COMP 322\\assignment1\\3D-TicTacToe\\googletest\\googletest\\src\\gtest_main.cc\"",
+  "file": "C:/Users/laure/projects/COMP 322/assignment1/3D-TicTacToe/googletest/googletest/src/gtest_main.cc"
+},
+
+{
+  "directory": "C:/Users/laure/projects/COMP 322/assignment1/3D-TicTacToe/build",
+  "command": "C:\\PROGRA~2\\MICROS~3\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1424~1.283\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP  -I..\\googletest\\googletest\\include -I..\\googletest\\googletest  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   /Fotest\\CMakeFiles\\TICTACTOETests.dir\\TicTacToeTests.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\laure\\projects\\COMP 322\\assignment1\\3D-TicTacToe\\test\\TicTacToeTests.cpp\"",
+  "file": "C:/Users/laure/projects/COMP 322/assignment1/3D-TicTacToe/test/TicTacToeTests.cpp"
+}
+]

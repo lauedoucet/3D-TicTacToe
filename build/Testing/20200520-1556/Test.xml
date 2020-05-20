@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20200520-1556-Experimental"
+	Name="(empty)"
+	Generator="ctest-3.15.19101501-MSVC_2"
+	CompilerName=""
+	CompilerVersion=""
+	OSName="Windows"
+	Hostname="DESKTOP-8FOD26V"
+	OSRelease=" Personal"
+	OSVersion=" (Build 18362)"
+	OSPlatform="x86"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="14"
+	ProcessorCacheSize="-1"
+	NumberOfLogicalCPU="8"
+	NumberOfPhysicalCPU="4"
+	TotalVirtualMemory="13180"
+	TotalPhysicalMemory="7782"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="1497"
+	>
+	<Testing>
+		<StartDateTime>May 20 11:56 Eastern Daylight Time</StartDateTime>
+		<StartTestTime>1589990167</StartTestTime>
+		<TestList>
+			<Test>./test/TICTACTOETests</Test>
+		</TestList>
+		<Test Status="passed">
+			<Name>TICTACTOETests</Name>
+			<Path>./test</Path>
+			<FullName>./test/TICTACTOETests</FullName>
+			<FullCommandLine>"C:\Users\laure\projects\COMP 322\assignment1\3D-TicTacToe\build\test\TICTACTOETests.exe"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.0888181</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>"C:\Users\laure\projects\COMP 322\assignment1\3D-TicTacToe\build\test\TICTACTOETests.exe"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJyNkMFqwzAQRO/6ij3aB4vmA3oIpORQaIvtnhxTVHXrCqzdIsnJ70eOjHENKZ7ToH3MarYciAx1YJWhLIdvxxakPHXMXY8BfVha7/SpG93HiEutRfM4q4VyytrByKSsyfvBBJSiKWa1cOz5U/VpjnQ2jskiRRZDMfyu4GVmbXStdM1YxycvGijfX+CmdjWTFVsMP/FTkUp6ff6HguwBrM+3rk44BA6qz8W2dgGVK774Qn9vd+9m4BRJyHaLPbHJ276qng5j38RKcQVrTZA6====</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<EndDateTime>May 20 11:56 Eastern Daylight Time</EndDateTime>
+		<EndTestTime>1589990167</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>
