@@ -18,25 +18,31 @@
 	ProcessorCacheSize="-1"
 	NumberOfLogicalCPU="8"
 	NumberOfPhysicalCPU="4"
-	TotalVirtualMemory="13180"
+	TotalVirtualMemory="12690"
 	TotalPhysicalMemory="7782"
 	LogicalProcessorsPerPhysical="2"
 	ProcessorClockFrequency="1497"
 	>
 	<Testing>
-		<StartDateTime>May 20 11:56 Eastern Daylight Time</StartDateTime>
-		<StartTestTime>1589990167</StartTestTime>
+		<StartDateTime>May 20 12:42 Eastern Daylight Time</StartDateTime>
+		<StartTestTime>1589992958</StartTestTime>
 		<TestList>
 			<Test>./test/TICTACTOETests</Test>
 		</TestList>
-		<Test Status="passed">
+		<Test Status="failed">
 			<Name>TICTACTOETests</Name>
 			<Path>./test</Path>
 			<FullName>./test/TICTACTOETests</FullName>
 			<FullCommandLine>"C:\Users\laure\projects\COMP 322\assignment1\3D-TicTacToe\build\test\TICTACTOETests.exe"</FullCommandLine>
 			<Results>
+				<NamedMeasurement type="text/string" name="Exit Code">
+					<Value>Failed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Exit Value">
+					<Value>1</Value>
+				</NamedMeasurement>
 				<NamedMeasurement type="numeric/double" name="Execution Time">
-					<Value>0.0888181</Value>
+					<Value>0.0791135</Value>
 				</NamedMeasurement>
 				<NamedMeasurement type="numeric/double" name="Processors">
 					<Value>1</Value>
@@ -48,12 +54,12 @@
 					<Value>"C:\Users\laure\projects\COMP 322\assignment1\3D-TicTacToe\build\test\TICTACTOETests.exe"</Value>
 				</NamedMeasurement>
 				<Measurement>
-					<Value encoding="base64" compression="gzip">eJyNkMFqwzAQRO/6ij3aB4vmA3oIpORQaIvtnhxTVHXrCqzdIsnJ70eOjHENKZ7ToH3MarYciAx1YJWhLIdvxxakPHXMXY8BfVha7/SpG93HiEutRfM4q4VyytrByKSsyfvBBJSiKWa1cOz5U/VpjnQ2jskiRRZDMfyu4GVmbXStdM1YxycvGijfX+CmdjWTFVsMP/FTkUp6ff6HguwBrM+3rk44BA6qz8W2dgGVK774Qn9vd+9m4BRJyHaLPbHJ276qng5j38RKcQVrTZA6====</Value>
+					<Value encoding="base64" compression="gzip">eJyNkU1rwzAMhu/+FTomsJp9sIthh4ylYzDGaL1d0jJcRwkGxw7+WLd/P6cJpS10VKcX65GsV1pEY5RpoRPKZDk0znZA6aq1ttUY0IdD6Z1ctYP6GnAqJake9rGGxdTrBgZm7DVpH1VASqrZPtbwrO1G6DGP5ls5azo0icUwi/0JfNiTK8mF5BZ5evKkgsXHG+xifZKjys+j1oMmydXOxAkh+z67u88ZoHPWMfgUOiLYhsFYm2HXh99HK1ydE4BChig0g0Zoj6T86VEGrBkEFzFNAvPi5bV8+ncSyG6h8/ml/kYcgg1C5+SyFQYUblbbrTk+0LnDgBOGHv+TrLwXy+Vo5XrHenpscOxwBVr5tALYoLZbduEOCEnlE8fLJSd/A7bOdg==</Value>
 				</Measurement>
 			</Results>
 		</Test>
-		<EndDateTime>May 20 11:56 Eastern Daylight Time</EndDateTime>
-		<EndTestTime>1589990167</EndTestTime>
+		<EndDateTime>May 20 12:42 Eastern Daylight Time</EndDateTime>
+		<EndTestTime>1589992958</EndTestTime>
 		<ElapsedMinutes>0</ElapsedMinutes>
 	</Testing>
 </Site>

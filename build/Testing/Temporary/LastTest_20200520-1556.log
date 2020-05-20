@@ -1,29 +1,36 @@
-Start testing: May 20 11:56 Eastern Daylight Time
+Start testing: May 20 12:42 Eastern Daylight Time
 ----------------------------------------------------------
 1/1 Testing: TICTACTOETests
 1/1 Test: TICTACTOETests
 Command: "C:/Users/laure/projects/COMP 322/assignment1/3D-TicTacToe/build/test/TICTACTOETests.exe"
 Directory: C:/Users/laure/projects/COMP 322/assignment1/3D-TicTacToe/build/test
-"TICTACTOETests" start time: May 20 11:56 Eastern Daylight Time
+"TICTACTOETests" start time: May 20 12:42 Eastern Daylight Time
 Output:
 ----------------------------------------------------------
 Running main() from ..\googletest\googletest\src\gtest_main.cc
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from TicTacToeTests
-[ RUN      ] TicTacToeTests.Something
-[       OK ] TicTacToeTests.Something (0 ms)
-[----------] 1 test from TicTacToeTests (0 ms total)
+[ RUN      ] TicTacToeTests.isFullTest
+..\test\TicTacToeTests.cpp(35): error: Value of: isFull(emptyBoard)
+  Actual: false
+Expected: true
+[  FAILED  ] TicTacToeTests.isFullTest (2 ms)
+[----------] 1 test from TicTacToeTests (2 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (1 ms total)
-[  PASSED  ] 1 test.
+[==========] 1 test from 1 test suite ran. (2 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] TicTacToeTests.isFullTest
+
+ 1 FAILED TEST
 <end of output>
-Test time =   0.09 sec
+Test time =   0.08 sec
 ----------------------------------------------------------
-Test Passed.
-"TICTACTOETests" end time: May 20 11:56 Eastern Daylight Time
+Test Failed.
+"TICTACTOETests" end time: May 20 12:42 Eastern Daylight Time
 "TICTACTOETests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: May 20 11:56 Eastern Daylight Time
+End testing: May 20 12:42 Eastern Daylight Time
