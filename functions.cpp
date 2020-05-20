@@ -117,53 +117,53 @@ bool checkNeighbours(int i, int board[], char symbol)
         case 0:
         case 9:
         case 18:
-            if (board[i+1] == symbol || board[i+3] == symbol || board[i+4] == symbol) {  board[i] == 'O'; moved = 1;   }
+            if (board[i+1] == symbol || board[i+3] == symbol || board[i+4] == symbol) {  board[i] = 'O'; moved = 1;   }
             break;
         case 1:
         case 10:
         case 19:
             if (board[i-1] == symbol || board[i+1] == symbol || board[i+2] == symbol || board[i+3] == symbol 
-                || board[i+4] == symbol) {  board[i] == 'O'; moved = 1;   }
+                || board[i+4] == symbol) {  board[i] = 'O'; moved = 1;   }
             break;
         case 2:
         case 11:
         case 20:
-            if (board[i-1] == symbol || board[i+2] == symbol || board[i+3] == symbol) {  board[i] == 'O'; moved = 1;   }
+            if (board[i-1] == symbol || board[i+2] == symbol || board[i+3] == symbol) {  board[i] = 'O'; moved = 1;   }
             break;
         case 3:
         case 12:
         case 21:
             if (board[i-3] == symbol || board[i-2] == symbol || board[i+1] == symbol || board[i+3] == symbol
-                || board[i+4] == symbol) {  board[i] == 'O'; moved = 1;   } 
+                || board[i+4] == symbol) {  board[i] = 'O'; moved = 1;   } 
             break;
         case 4:
         case 13:
         case 22:
             if (board[i-4] == symbol || board[i-3] == symbol || board[i-2] == symbol || board[i-1] == symbol 
                 || board[i+1] == symbol || board[i+2] == symbol || board[i+3] == symbol || board[i+4] == symbol )
-                {     board[i] == 'O'; moved = 1;   } 
+                {     board[i] = 'O'; moved = 1;   } 
             break;
         case 5:
         case 14:
         case 23:
             if (board[i-4] == symbol || board[i-3] == symbol || board[i-1] == symbol || board[i+2] == symbol || board[i+3] == symbol)
-                {     board[i] == 'O'; moved = 1;   } 
+                {     board[i] = 'O'; moved = 1;   } 
             break;
         case 6:
         case 15:
         case 24:
-            if (board[i-3] == symbol || board[i-2] == symbol || board[i+1] == symbol ) {     board[i] == 'O'; moved = 1;   } 
+            if (board[i-3] == symbol || board[i-2] == symbol || board[i+1] == symbol ) {     board[i] = 'O'; moved = 1;   } 
             break;
         case 7: 
         case 16:
         case 25:
             if (board[i-4] == symbol || board[i-3] == symbol || board[i-2] == symbol || board[i-1] == symbol 
-                || board[i+1] == symbol) {     board[i] == 'O'; moved = 1;   } 
+                || board[i+1] == symbol) {     board[i] = 'O'; moved = 1;   } 
             break;
         case 8: 
         case 17: 
         case 26:
-            if (board[i-4] == symbol || board[i-3] == symbol || board[i-1] == symbol) {     board[i] == 'O'; moved = 1;   } 
+            if (board[i-4] == symbol || board[i-3] == symbol || board[i-1] == symbol) {     board[i] = 'O'; moved = 1;   } 
             break;
     }
     return moved;
