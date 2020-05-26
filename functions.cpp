@@ -34,11 +34,13 @@ bool isFull(int board[])
 int verticalWin(int board[])
 {
     bool winner = 0;
-    for (int i=0; i<27; i++)
+    int i = 0;
+    while (i < 27)
     {
         if (board[i] == board[i+3] && board[i] == board[i+6]) { winner = board[i];}
 
-        if (i == 2 || i == 11 || i == 20) { i = i + 8;}
+        if (i == 2 || i == 11 || i == 20) { i = i + 7;}
+        else { i++; }
     }
     return winner;
 }

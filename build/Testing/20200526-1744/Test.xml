@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20200526-1744-Experimental"
+	Name="(empty)"
+	Generator="ctest-3.15.19101501-MSVC_2"
+	CompilerName=""
+	CompilerVersion=""
+	OSName="Windows"
+	Hostname="DESKTOP-8FOD26V"
+	OSRelease=" Personal"
+	OSVersion=" (Build 18362)"
+	OSPlatform="x86"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="14"
+	ProcessorCacheSize="-1"
+	NumberOfLogicalCPU="8"
+	NumberOfPhysicalCPU="4"
+	TotalVirtualMemory="12902"
+	TotalPhysicalMemory="7782"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="1497"
+	>
+	<Testing>
+		<StartDateTime>May 26 14:34 Eastern Daylight Time</StartDateTime>
+		<StartTestTime>1590518062</StartTestTime>
+		<TestList>
+			<Test>./test/TICTACTOETests</Test>
+		</TestList>
+		<Test Status="passed">
+			<Name>TICTACTOETests</Name>
+			<Path>./test</Path>
+			<FullName>./test/TICTACTOETests</FullName>
+			<FullCommandLine>"C:\Users\laure\projects\COMP 322\assignment1\3D-TicTacToe\build\test\TICTACTOETests.exe"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.033531</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>"C:\Users\laure\projects\COMP 322\assignment1\3D-TicTacToe\build\test\TICTACTOETests.exe"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJyNksFOwzAMQO/9Ch/bQyMmxJED0oDDJEBdEYeuQiELnaXURkm6SXw9zTpVtIgtPjnxy7OsuOiIkBpoJVKawaflFoTYNMyN0V47/zt1Vm2akL0HXCiVVLdj1FCcXDcQGDfIFscDuA69FkmVj1HDo+EPaYa6pj1aplZTz2qfd18zeCItUZVSlazLcJdUULw+wTHqWU2ge+iMCXmPDfG8OodBegWty85K99p6VNK8IV00z9gY/Y4tfjP5uAZ/6JgWW5QNU1yDGRujPyBdLy+KR2pURv44pIueB8/90FkSt1VeS5tv+UDTpf13WcFKEtNG/Swvd+v1/TJMfHookh99KAkb====</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<EndDateTime>May 26 14:34 Eastern Daylight Time</EndDateTime>
+		<EndTestTime>1590518062</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>
